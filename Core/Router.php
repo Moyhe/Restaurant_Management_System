@@ -2,6 +2,9 @@
 
 namespace Core;
 
+use Core\Middleware\Middleware;
+use Exception;
+
 class Router
 {
    protected array $routes = [];
@@ -50,6 +53,23 @@ class Router
         return $this;
     }
 
+    /**
+     * @throws Exception
+     */
+    public function route($uri, $method)
+    {
+        foreach ($this->routes as $route)
+        {
+            if ($route['uri'] === $uri && $route['method'] === strtoupper($method))
+            {
+                Middleware::resolve($route['middleware']);
+
+                return require base_path('Http/controllers/' . $route['controller']);
+            }
+        }
+
+        $this->abort();
+    }
 
     public function previousUrl()
     {
