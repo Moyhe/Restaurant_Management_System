@@ -4,10 +4,16 @@ namespace Core;
 
 use Core\Middleware\Middleware;
 use Exception;
+use JetBrains\PhpStorm\NoReturn;
 
 class Router
 {
-   protected array $routes = [];
+    protected array $routes = [];
+
+    public function get($uri, $controller): void
+    {
+        $this->add('GET', $uri, $controller);
+    }
 
     public function add($method, $uri, $controller): static
     {
@@ -19,11 +25,6 @@ class Router
         ];
 
         return $this;
-    }
-   
-    public function get($uri, $controller): void
-    {
-        $this->add('GET', $uri, $controller);
     }
 
     public function post($uri, $controller): void
@@ -58,31 +59,29 @@ class Router
      */
     public function route($uri, $method)
     {
-        foreach ($this->routes as $route)
-        {
-            if ($route['uri'] === $uri && $route['method'] === strtoupper($method))
-            {
+        foreach ($this->routes as $route) {
+            if ($route['uri'] === $uri && $route['method'] === strtoupper($method)) {
                 Middleware::resolve($route['middleware']);
 
-                return require base_path('Http/controllers/' . $route['controller']);
+                return require base_path('Http/controllers/'.$route['controller']);
             }
         }
 
         $this->abort();
     }
 
-    public function previousUrl()
-    {
-        return $_SERVER['HTTP_REFERER'];
-    }
-
-    protected function abort($code = 404)
+    #[NoReturn] protected function abort($code = 404): void
     {
         http_response_code($code);
 
         require base_path("views/{$code}.php");
 
         die();
+    }
+
+    public function previousUrl()
+    {
+        return $_SERVER['HTTP_REFERER'];
     }
 
 

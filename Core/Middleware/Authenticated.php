@@ -4,13 +4,12 @@ namespace Core\Middleware;
 
 class Authenticated
 {
-    public function handle()
+    public function handle(): void
     {
-       if (!$_SESSION['user'] ?? false)
-       {
-           header('location: /');
-           exit();
-       }
+        if (!$_SESSION['user'] ?? false) {
+            header('location: /');
+            exit();
+        }
 
     }
 }

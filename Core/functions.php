@@ -1,6 +1,8 @@
 <?php
 
-function dd($value)
+use JetBrains\PhpStorm\NoReturn;
+
+#[NoReturn] function dd($value): void
 {
     echo "<pre>";
     var_dump($value);
@@ -9,7 +11,7 @@ function dd($value)
     die();
 }
 
-function abort($code = 404): void
+#[NoReturn] function abort($code = 404): void
 {
     http_response_code($code);
 
@@ -20,17 +22,17 @@ function abort($code = 404): void
 
 function base_path($path): string
 {
-    return BASE_PATH . $path;
+    return BASE_PATH.$path;
 }
 
 function view($path, $attributes = []): void
 {
     extract($attributes);
 
-    require base_path('views/' . $path);
+    require base_path('views/'.$path);
 }
 
-function redirect($path): void
+#[NoReturn] function redirect($path): void
 {
     header("location: {$path}");
     exit();
