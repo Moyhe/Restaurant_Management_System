@@ -32,7 +32,7 @@
     <!-- Template Stylesheet -->
     <link href="/public/css/style.css" rel="stylesheet">
 </head>
-
 <body>
 <div class="container-xxl bg-white p-0">
+
 
