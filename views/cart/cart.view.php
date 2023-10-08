@@ -1,5 +1,5 @@
-<?php require('../partials/head.php') ?>
-<?php require('../partials/navbar.php') ?>
+<?php require base_path('views/partials/head.php') ?>
+<?php require base_path('views/partials/navbar.php') ?>
 
     <!-- Service Start -->
     <div class="container">
@@ -43,4 +43,4 @@
     </div>
     <!-- Service End -->
 
-<?php require('../partials/footer.php') ?>
+<?php require base_path('views/partials/footer.php') ?>

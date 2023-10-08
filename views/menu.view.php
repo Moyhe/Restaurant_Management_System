@@ -1,5 +1,5 @@
-<?php require('../partials/head.php') ?>
-<?php require('../partials/navbar.php') ?>
+<?php require('partials/head.php') ?>
+<?php require('partials/navbar.php') ?>
 
     <!-- Menu Start -->
     <div class="container-xxl py-5">
@@ -371,4 +371,4 @@
     </div>
     <!-- Menu End -->
 
-<?php require('../partials/footer.php') ?>
+<?php require('partials/footer.php') ?>

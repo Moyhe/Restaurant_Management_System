@@ -21,7 +21,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0 pe-4">
                 <a href="/" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="/about" class="nav-item nav-link">About</a>
                 <a href="service.html" class="nav-item nav-link active">Service</a>
                 <a href="menu.html" class="nav-item nav-link">Menu</a>
                 <div class="nav-item dropdown">
@@ -32,7 +32,7 @@
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                     </div>
                 </div>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <a href="/contact" class="nav-item nav-link">Contact</a>
             </div>
             <a href="" class="btn btn-primary py-2 px-4">Book A Table</a>
         </div>

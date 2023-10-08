@@ -1,5 +1,5 @@
-<?php require('../partials/head.php') ?>
-<?php require('../partials/navbar.php') ?>
+<?php require('partials/head.php') ?>
+<?php require('partials/navbar.php') ?>
 
     <!-- Service Start -->
     <div class="container-xxl py-5">
@@ -86,4 +86,4 @@
     </div>
     <!-- Service End -->
 
-<?php require('../partials/footer.php') ?>
+<?php require('partials/footer.php') ?>
