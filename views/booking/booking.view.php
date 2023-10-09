@@ -1,5 +1,5 @@
-<?php require('partials/head.php') ?>
-<?php require('partials/navbar.php') ?>
+<?php require base_path('views/partials/head.php') ?>
+<?php require base_path('views/partials/navbar.php') ?>
 
 <!-- Reservation Start -->
 <div class="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
@@ -83,4 +83,4 @@
 </div>
 <!-- Reservation Start -->
 
-<?php require('partials/footer.php') ?>
+<?php require base_path('views/partials/footer.php') ?>
