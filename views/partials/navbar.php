@@ -22,19 +22,19 @@
             <div class="navbar-nav ms-auto py-0 pe-4">
                 <a href="/" class="nav-item nav-link">Home</a>
                 <a href="/about" class="nav-item nav-link">About</a>
-                <a href="service.html" class="nav-item nav-link active">Service</a>
-                <a href="menu.html" class="nav-item nav-link">Menu</a>
+                <a href="/service" class="nav-item nav-link active">Service</a>
+                <a href="/menu" class="nav-item nav-link">Menu</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu m-0">
-                        <a href="booking.html" class="dropdown-item">Booking</a>
-                        <a href="team.html" class="dropdown-item">Our Team</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="/booking" class="dropdown-item">Booking</a>
+                        <a href="/team" class="dropdown-item">Our Team</a>
+                        <a href="/testimonial" class="dropdown-item">Testimonial</a>
                     </div>
                 </div>
                 <a href="/contact" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="" class="btn btn-primary py-2 px-4">Book A Table</a>
+            <a href="/booking" class="btn btn-primary py-2 px-4">Book A Table</a>
         </div>
     </nav>
 
@@ -43,8 +43,8 @@
             <h1 class="display-3 text-white mb-3 animated slideInDown">Login</h1>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb justify-content-center text-uppercase">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Login</a></li>
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/login">Login</a></li>
                 </ol>
             </nav>
         </div>
