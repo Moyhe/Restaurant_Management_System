@@ -11,7 +11,7 @@ class DataBase
     public PDO $connection;
     public PDOStatement $statement;
 
-    public function __construct($config, $username = 'secret', $password = 'secret')
+    public function __construct($config, $username = 'laravel', $password = 'secret')
     {
         $dsn = 'mysql:' . http_build_query($config, '', ';');
 

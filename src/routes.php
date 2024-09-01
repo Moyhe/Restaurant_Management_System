@@ -11,6 +11,9 @@ $router->get('/testimonial', 'testimonial.php');
 $router->get('/booking', 'booking/booking.php');
 
 $router->get('/register', 'register/create.php');
+$router->post('/register', 'register/store.php');
+
 $router->get('/login', 'session/create.php');
+$router->post('/login', 'session/store.php');
 
 $router->get('/cart', 'cart/index.php');

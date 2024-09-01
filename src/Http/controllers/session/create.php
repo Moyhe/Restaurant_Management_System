@@ -1,3 +1,5 @@
 <?php
 
-view('session/create.view.php');
+view('session/create.view.php', [
+    'login' => 'Login'
+]);

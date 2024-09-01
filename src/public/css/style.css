@@ -154,6 +154,7 @@
 .hero-header {
     background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url(../img/bg-hero.jpg) no-repeat center center;
     background-size: cover;
+
 }
 
 .hero-header img {

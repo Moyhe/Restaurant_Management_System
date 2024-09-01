@@ -25,7 +25,6 @@
                 <a href="/service" class="nav-item nav-link">Service</a>
                 <a href="/menu" class="nav-item nav-link">Menu</a>
                 <a href="/cart" class="nav-item nav-link"><i class="fa-sharp fa-solid fa-cart-shopping"></i>Cart</a>
-
                 <a href="/contact" class="nav-item nav-link">Contact</a>
                 <a href="/login" class="nav-item nav-link">Login</a>
                 <a href="/register" class="nav-item nav-link">Register</a>

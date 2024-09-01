@@ -19,6 +19,7 @@ function abort($code = 404): void
     die();
 }
 
+
 function base_path($path): string
 {
     return BASE_PATH . $path;

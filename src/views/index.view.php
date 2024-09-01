@@ -1,7 +1,6 @@
 <?php require('partials/head.php') ?>
 <?php require('partials/nav.php') ?>
 
-
 <main>
     <!-- Service Start -->
     <div class="container-xxl py-5">
@@ -165,7 +164,7 @@
                                         </h5>
                                         <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo
                                             diam</small>
-                                        <a type="button" href="add-cart.html"
+                                        <a type="button" href="/cart"
                                             class="btn btn-primary py-2 top-0 end-0 mt-2 me-2">view</a>
                                     </div>
                                 </div>
@@ -571,9 +570,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating date" id="date3" data-target-input="nearest">
-                                    <input type="text" class="form-control datetimepicker-input" id="datetime"
-                                        placeholder="Date & Time" data-target="#date3"
-                                        data-toggle="datetimepicker" />
+                                    <input type="text" class="form-control datetimepicker-input" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
                                     <label for="datetime">Date & Time</label>
                                 </div>
                             </div>
