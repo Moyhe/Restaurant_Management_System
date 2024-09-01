@@ -2,6 +2,8 @@
 
 
 use Core\Router;
+use Core\Session;
+use Core\ValidationException;
 
 const BASE_PATH = __DIR__ . '/../';
 
@@ -20,6 +22,11 @@ $method = $_POST['_method'] ?? $_SERVER['REQUEST_METHOD'];
 
 try {
     $router->route($uri, $method);
-} catch (Exception $e) {
-    echo $e->getMessage();
+} catch (ValidationException $exception) {
+    Session::flash('errors', $exception->errors);
+    Session::flash('old', $exception->old);
+
+    return redirect($router->previousUrl());
 }
+
+Session::unflash();

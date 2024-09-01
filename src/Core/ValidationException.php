@@ -1,12 +1,16 @@
 <?php
 
+namespace Core;
+
+use Exception;
+
 class ValidationException extends Exception
 {
 
     public readonly array $errors;
     public readonly array $old;
 
-    public function throw($errors, $old): self
+    public static function throw($errors, $old): self
     {
 
         $instance = new static("The form failed to validate..");
