@@ -1,5 +1,6 @@
 <?php require base_path('views/partials/head.php') ?>
 <?php require base_path('views/partials/navbar.php') ?>
+<?php require base_path('views/partials/banner.php') ?>
 
 <!-- Reservation Start -->
 <div class="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
@@ -7,7 +8,7 @@
         <div class="col-md-6">
             <div class="video">
                 <button type="button" class="btn-play" data-bs-toggle="modal"
-                        data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
+                    data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
                     <span></span>
                 </button>
             </div>
@@ -33,7 +34,7 @@
                         <div class="col-md-6">
                             <div class="form-floating date" id="date3" data-target-input="nearest">
                                 <input type="text" class="form-control datetimepicker-input" id="datetime"
-                                       placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker"/>
+                                    placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
                                 <label for="datetime">Date & Time</label>
                             </div>
                         </div>
@@ -50,7 +51,7 @@
                         <div class="col-12">
                             <div class="form-floating">
                                 <textarea class="form-control" placeholder="Special Request" id="message"
-                                          style="height: 100px"></textarea>
+                                    style="height: 100px"></textarea>
                                 <label for="message">Special Request</label>
                             </div>
                         </div>
@@ -75,7 +76,7 @@
                 <!-- 16:9 aspect ratio -->
                 <div class="ratio ratio-16x9">
                     <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
-                            allow="autoplay"></iframe>
+                        allow="autoplay"></iframe>
                 </div>
             </div>
         </div>

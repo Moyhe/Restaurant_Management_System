@@ -6,8 +6,6 @@ $router->get('/contact', 'contact.php');
 $router->get('/about', 'about.php');
 $router->get('/service', 'service.php');
 $router->get('/menu', 'menu.php');
-$router->get('/team', 'team.php');
-$router->get('/testimonial', 'testimonial.php');
 $router->get('/booking', 'booking/booking.php');
 
 $router->get('/register', 'register/create.php');
@@ -22,8 +20,14 @@ $router->get('/items', 'cart/itemDetails.php');
 $router->post('/addToCart', 'cart/store.php');
 $router->delete('/delete-item', 'cart/destroy.php');
 
-
 $router->get('/checkout', 'checkout/create.php');
 $router->get('/pay', 'payment/paypal.php');
 $router->get('/clear-cart', 'payment/destroy.php');
 $router->post('/checkout', 'checkout/store.php');
+
+
+$router->post('/booking', 'booking/store.php');
+$router->get('/bookings', 'booking/index.php');
+
+
+$router->get('/orders', 'orders/index.php');

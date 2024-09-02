@@ -1,5 +1,6 @@
 <?php require('partials/head.php') ?>
 <?php require('partials/navbar.php') ?>
+<?php require('partials/banner.php') ?>
 
 <!-- Menu Start -->
 <div class="container-xxl py-5">

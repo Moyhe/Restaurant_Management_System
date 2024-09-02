@@ -38,6 +38,8 @@
                             <?= $_SESSION['user']['email'] ?>
                         </a>
                         <ul class="dropdown-menu">
+                            <li> <a class="dropdown-item" href="/bookings">bookings</a></li>
+                            <li> <a class="dropdown-item" href="/orders">orders</a></li>
                             <form action="/session" method="post">
                                 <input type="hidden" name="_method" value="DELETE" />
                                 <li> <button class="dropdown-item btn">logout</button></li>

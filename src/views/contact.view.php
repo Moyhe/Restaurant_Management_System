@@ -1,6 +1,6 @@
 <?php require('partials/head.php') ?>
 <?php require('partials/navbar.php') ?>
-<?php require base_path('partials/banner.php') ?>
+<?php require('partials/banner.php') ?>
 
 <main>
     <!-- Contact Start -->
