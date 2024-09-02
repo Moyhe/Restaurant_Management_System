@@ -31,3 +31,6 @@ $router->get('/bookings', 'booking/index.php');
 
 
 $router->get('/orders', 'orders/index.php');
+
+$router->get('/review', 'reviews/review.php');
+$router->post('/review', 'reviews/store.php');

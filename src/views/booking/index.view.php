@@ -16,6 +16,7 @@
                         <th scope="col">number of people</th>
                         <th scope="col">sepcial request</th>
                         <th scope="col">status</th>
+                        <th scope="col">review</th>
                     </tr>
                 </thead>
 
@@ -30,6 +31,11 @@
                             </td>
                             <td><?= $booking['special_request'] ?></td>
                             <td><?= $booking['status'] ?></td>
+                            <td>
+                                <?php if ($booking['status'] == 'confirmed') : ?>
+                                    <a href="/review" class="btn btn-warning text-white">review us</a>
+                                <?php endif; ?>
+                            </td>
                         </tr>
                     <? endforeach; ?>
                 </tbody>
