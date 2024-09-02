@@ -45,6 +45,9 @@ if ($user) {
         'email' => $email,
         'password' => password_hash($password, PASSWORD_BCRYPT)
     ]);
-    (new Authenticator)->login($user);
-    header('/');
+
+    (new Authenticator)->login(['email' => $email]);
+
+    header('location: /');
+    exit();
 }

@@ -34,4 +34,9 @@ class Authenticator
 
         session_regenerate_id(true);
     }
+
+    public function logout()
+    {
+        Session::destroy();
+    }
 }

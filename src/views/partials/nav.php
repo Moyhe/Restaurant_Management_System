@@ -26,8 +26,23 @@
                 <a href="/menu" class="nav-item nav-link">Menu</a>
                 <a href="/cart" class="nav-item nav-link"><i class="fa-sharp fa-solid fa-cart-shopping"></i>Cart</a>
                 <a href="/contact" class="nav-item nav-link">Contact</a>
-                <a href="/login" class="nav-item nav-link">Login</a>
-                <a href="/register" class="nav-item nav-link">Register</a>
+
+                <?php
+
+                use Core\Session;
+
+                if (Session::has('user')) : ?>
+
+                    <form action="/session" method="post">
+                        <input type="hidden" name="_method" value="DELETE" />
+                        <button class="nav-item nav-link btn">logout</button>
+                    </form>
+
+                <?php else : ?>
+
+                    <a href="/login" class="nav-item nav-link">Login</a>
+                    <a href="/register" class="nav-item nav-link">Register</a>
+                <?php endif; ?>
             </div>
 
         </div>

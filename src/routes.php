@@ -15,5 +15,6 @@ $router->post('/register', 'register/store.php');
 
 $router->get('/login', 'session/create.php');
 $router->post('/session', 'session/store.php');
+$router->delete('/session', 'session/destroy.php');
 
 $router->get('/cart', 'cart/index.php');
