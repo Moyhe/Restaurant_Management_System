@@ -21,3 +21,9 @@ $router->get('/cart', 'cart/index.php');
 $router->get('/items', 'cart/itemDetails.php');
 $router->post('/addToCart', 'cart/store.php');
 $router->delete('/delete-item', 'cart/destroy.php');
+
+
+$router->get('/checkout', 'checkout/create.php');
+$router->get('/pay', 'payment/paypal.php');
+$router->get('/clear-cart', 'payment/destroy.php');
+$router->post('/checkout', 'checkout/store.php');

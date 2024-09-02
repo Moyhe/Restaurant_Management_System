@@ -14,6 +14,8 @@ $cartPrice = $db->query('SELECT SUM(price) as total_price from cart WHERE user_i
     'user_id' => Session::get('user_id')['id']
 ])->find();
 
+Session::put('total_price', $cartPrice['total_price']);
+
 view('cart/cart.view.php', [
     'cart' => $cart,
     'heading' => 'Cart',

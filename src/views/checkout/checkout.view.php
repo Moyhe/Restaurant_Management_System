@@ -1,5 +1,6 @@
 <?php require base_path('views/partials/head.php') ?>
 <?php require base_path('views/partials/navbar.php') ?>
+<?php require base_path('views/partials/banner.php') ?>
 
 <!-- Service Start -->
 <div class="container">
@@ -8,7 +9,7 @@
         <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
             <h5 class="section-title ff-secondary text-start text-primary fw-normal">Reservation</h5>
             <h1 class="text-white mb-4">Checkout</h1>
-            <form class="col-md-12">
+            <form class="col-md-12" method="POST" action="/checkout">
                 <div class="row g-3">
                     <div class="col-md-12">
                         <div class="form-floating">
@@ -18,7 +19,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-floating">
-                            <input type="email" class="form-control" id="email" name="eamil" placeholder="Your Email">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
                             <label for="email">Your Email</label>
                         </div>
                     </div>
@@ -37,19 +38,19 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-floating">
-                            <input type="text" class="form-control" id="email" placeholder="Zipcode">
+                            <input type="text" class="form-control" name="zipcode" id="email" placeholder="Zipcode">
                             <label for="text">Zipcode</label>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="form-floating">
-                            <input type="text" class="form-control" id="email" placeholder="Phone number">
+                            <input type="text" class="form-control" name="phoneNumber" id="email" placeholder="Phone number">
                             <label for="text">Phone number</label>
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="form-floating">
-                            <textarea class="form-control" placeholder="Address" id="message"
+                            <textarea class="form-control" name="address" placeholder="Address" id="message"
                                 style="height: 100px"></textarea>
                             <label for="message">Address</label>
                         </div>
