@@ -18,3 +18,6 @@ $router->post('/session', 'session/store.php');
 $router->delete('/session', 'session/destroy.php');
 
 $router->get('/cart', 'cart/index.php');
+$router->get('/items', 'cart/itemDetails.php');
+$router->post('/addToCart', 'cart/store.php');
+$router->delete('/delete-item', 'cart/destroy.php');

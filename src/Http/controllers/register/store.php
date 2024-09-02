@@ -48,6 +48,6 @@ if ($user) {
 
     (new Authenticator)->login(['email' => $email]);
 
-    header('location: /');
+    header('location: /login');
     exit();
 }

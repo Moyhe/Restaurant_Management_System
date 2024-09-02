@@ -1,6 +1,5 @@
 <?php
 
-
 use Core\Router;
 use Core\Session;
 use Core\ValidationException;
@@ -14,7 +13,6 @@ require BASE_PATH . 'Core/functions.php';
 require BASE_PATH . 'bootstrap.php';
 
 $router = new Router();
-
 require BASE_PATH . 'routes.php';
 
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
@@ -24,7 +22,6 @@ try {
     $router->route($uri, $method);
 } catch (ValidationException $exception) {
     Session::flash('errors', $exception->errors);
-    Session::flash('old', $exception->old);
 
     return redirect($router->previousUrl());
 }

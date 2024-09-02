@@ -7,7 +7,6 @@
 </div>
 <!-- Spinner End -->
 
-
 <!-- Navbar & Hero Start -->
 <div class="position-relative p-0">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
@@ -24,7 +23,6 @@
                 <a href="/about" class="nav-item nav-link">About</a>
                 <a href="/service" class="nav-item nav-link">Service</a>
                 <a href="/menu" class="nav-item nav-link">Menu</a>
-                <a href="/cart" class="nav-item nav-link"><i class="fa-sharp fa-solid fa-cart-shopping"></i>Cart</a>
                 <a href="/contact" class="nav-item nav-link">Contact</a>
 
                 <?php
@@ -32,11 +30,20 @@
                 use Core\Session;
 
                 if (Session::has('user')) : ?>
+                    <a href="/cart" class="nav-item nav-link"><i class="fa-sharp fa-solid fa-cart-shopping"></i>Cart</a>
 
-                    <form action="/session" method="post">
-                        <input type="hidden" name="_method" value="DELETE" />
-                        <button class="nav-item nav-link btn">logout</button>
-                    </form>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <?= $_SESSION['user']['email'] ?>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <form action="/session" method="post">
+                                <input type="hidden" name="_method" value="DELETE" />
+                                <li> <button class="dropdown-item btn">logout</button></li>
+                            </form>
+
+                        </ul>
+                    </li>
 
                 <?php else : ?>
 

@@ -20,21 +20,39 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0 pe-4">
-                <a href="/" class="nav-item nav-link">Home</a>
+                <a href="/" class="nav-item nav-link active">Home</a>
                 <a href="/about" class="nav-item nav-link">About</a>
-                <a href="/service" class="nav-item nav-link active">Service</a>
+                <a href="/service" class="nav-item nav-link">Service</a>
                 <a href="/menu" class="nav-item nav-link">Menu</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu m-0">
-                        <a href="/booking" class="dropdown-item">Booking</a>
-                        <a href="/team" class="dropdown-item">Our Team</a>
-                        <a href="/testimonial" class="dropdown-item">Testimonial</a>
-                    </div>
-                </div>
                 <a href="/contact" class="nav-item nav-link">Contact</a>
+
+                <?php
+
+                use Core\Session;
+
+                if (Session::has('user')) : ?>
+                    <a href="/cart" class="nav-item nav-link"><i class="fa-sharp fa-solid fa-cart-shopping"></i>Cart</a>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <?= $_SESSION['user']['email'] ?>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <form action="/session" method="post">
+                                <input type="hidden" name="_method" value="DELETE" />
+                                <li> <button class="dropdown-item btn">logout</button></li>
+                            </form>
+
+                        </ul>
+                    </li>
+
+                <?php else : ?>
+
+                    <a href="/login" class="nav-item nav-link">Login</a>
+                    <a href="/register" class="nav-item nav-link">Register</a>
+                <?php endif; ?>
             </div>
-            <a href="/booking" class="btn btn-primary py-2 px-4">Book A Table</a>
+
         </div>
     </nav>
 

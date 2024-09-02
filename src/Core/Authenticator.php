@@ -18,6 +18,10 @@ class Authenticator
                     'email' => $email
                 ]);
 
+                $_SESSION['user_id'] = [
+                    'id' => $user['id']
+                ];
+
                 return true;
             }
         }
