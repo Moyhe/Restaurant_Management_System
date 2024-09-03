@@ -34,3 +34,16 @@ $router->get('/orders', 'orders/index.php');
 
 $router->get('/review', 'reviews/review.php');
 $router->post('/review', 'reviews/store.php');
+
+
+// admins
+
+$router->get('/admins', 'admin/create.php');
+$router->get('/admins/all', 'admin/admins.php');
+$router->get('/admins/create', 'admin/admin_create.php');
+$router->get('/admins/session', 'admin/session/create.php');
+
+$router->get('/admin/bookings', 'admin/bookings/create.php');
+$router->get('/admin/orders', 'admin/orders/create.php');
+$router->get('/admin/foods', 'admin/foods/create.php');
+$router->get('/admin/create/food', 'admin/foods/food.php');
