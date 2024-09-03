@@ -40,8 +40,11 @@ $router->post('/review', 'reviews/store.php');
 
 $router->get('/admins', 'admin/create.php');
 $router->get('/admins/all', 'admin/admins.php');
-$router->get('/admins/create', 'admin/admin_create.php');
+$router->get('/admins/create', 'admin/register/admin_create.php');
+$router->post('/admins/create', 'admin/register/store.php');
 $router->get('/admins/session', 'admin/session/create.php');
+$router->post('/admins/session', 'admin/session/store.php');
+$router->delete('/admins/session', 'admin/session/destroy.php');
 
 $router->get('/admin/bookings', 'admin/bookings/create.php');
 $router->get('/admin/orders', 'admin/orders/create.php');

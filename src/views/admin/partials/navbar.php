@@ -1,3 +1,7 @@
+<?php
+
+use Core\Session;
+?>
 <div id="wrapper">
     <nav class="navbar header-top fixed-top navbar-expand-lg  navbar-dark bg-dark">
         <div class="container">
@@ -33,15 +37,23 @@
                         <a class="nav-link" href="/admins/session">login
                         </a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link  dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            username
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Logout</a>
+                    <?php if (Session::has('admin')) : ?>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link  dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
-                    </li>
 
+                                <?= Session::get('admin')['name'] ?>
+
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <form action="/admins/session" method="post">
+                                    <input type="hidden" name="_method" value="DELETE" />
+                                    <button class="dropdown-item">Logout</button>
+                                </form>
+
+                            </div>
+                        </li>
+                    <?php endif; ?>
 
                 </ul>
             </div>

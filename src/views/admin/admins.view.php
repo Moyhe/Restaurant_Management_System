@@ -2,7 +2,6 @@
 <?php require base_path('views/admin/partials/navbar.php') ?>
 
 <div class="container-fluid">
-
     <div class="row">
         <div class="col">
             <div class="card">
@@ -18,24 +17,15 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
 
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
+                            <?php foreach ($admins as $admin) : ?>
+                                <tr>
+                                    <th scope="row"> <?= $admin['id'] ?> </th>
+                                    <td><?= $admin['name'] ?></td>
+                                    <td><?= $admin['email'] ?></td>
 
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-
-                            </tr>
+                                </tr>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>
