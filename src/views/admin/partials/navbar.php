@@ -25,7 +25,7 @@ use Core\Session;
                         <a class="nav-link" href="/admin/orders" style="margin-left: 20px;">Orders</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/admin/foods" style="margin-left: 20px;">Foods</a>
+                        <a class="nav-link" href="/admin/create/food" style="margin-left: 20px;">Foods</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/admin/bookings" style="margin-left: 20px;">Bookings</a>
