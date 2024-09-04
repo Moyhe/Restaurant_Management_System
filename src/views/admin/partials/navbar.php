@@ -33,10 +33,7 @@ use Core\Session;
                 </ul>
                 <ul class="navbar-nav ml-md-auto d-md-flex">
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="/admins/session">login
-                        </a>
-                    </li>
+
                     <?php if (Session::has('admin')) : ?>
                         <li class="nav-item dropdown">
                             <a class="nav-link  dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -52,6 +49,11 @@ use Core\Session;
                                 </form>
 
                             </div>
+                        </li>
+                    <?php else : ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/admins/session">login
+                            </a>
                         </li>
                     <?php endif; ?>
 
