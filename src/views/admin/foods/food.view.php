@@ -31,6 +31,7 @@
                                     <td>
                                         <form action="/admins/foods?id=<?= $food['id'] ?>" method="post">
                                             <input type="hidden" name="_method" value="DELETE">
+                                            <input type="hidden" name="image" value="<?= $food['image'] ?>">
                                             <button class="btn btn-danger  text-center ">delete</button>
                                         </form>
                                     </td>
