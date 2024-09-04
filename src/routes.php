@@ -51,6 +51,7 @@ $router->delete('/admins/bookings', 'admin/bookings/destroy.php');
 $router->get('/admin/orders', 'admin/orders/create.php');
 $router->delete('/admins/orders', 'admin/orders/destroy.php');
 $router->get('/admin/foods', 'admin/foods/create.php');
+$router->post('/admin/foods', 'admin/foods/store.php');
 $router->get('/admin/foods', 'admin/foods/destroy.php');
 $router->get('/admin/create/food', 'admin/foods/food.php');
 $router->delete('/admins/foods', 'admin/foods/destroy.php');
