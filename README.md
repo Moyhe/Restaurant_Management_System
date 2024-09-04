@@ -2,6 +2,10 @@
 
 this project built with mvc architecture in pure php 8, OOP, MySQL, nginx all that was built on docker
 
+## Demo
+
+will just clone the project and have fun. joking... it will be comming soon
+
 ## Installation
 
 1-clone the project
