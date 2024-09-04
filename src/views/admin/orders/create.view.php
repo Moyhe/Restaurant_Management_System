@@ -21,59 +21,36 @@
                                 <th scope="col">phone_number</th>
                                 <th scope="col">address</th>
                                 <th scope="col">total_price</th>
-                                <th scope="col">status</th>
+                                <!-- <th scope="col">status</th> -->
                                 <th scope="col">delete</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>MOhamed</td>
-                                <td>moha@gmail.com</td>
-                                <td>town</td>
-                                <td>country</td>
-                                <td>
-                                    443223
-                                </td>
-                                <td>012343223</td>
-                                <td>Completely benchmark pandemic synergy vis-a-vis state of the art niches. Quickly mesh functionalized opportunities whereas turnkey solutions. </td>
-                                <td>$20</td>
+                            <?php foreach ($orders as $order) : ?>
+                                <tr>
+                                    <th scope="row"> <?= $order['id'] ?> </th>
+                                    <td><?= $order['name'] ?></td>
+                                    <td><?= $order['email'] ?></td>
+                                    <td><?= $order['town'] ?></td>
+                                    <td><?= $order['country'] ?></td>
+                                    <td>
+                                        <?= $order['zipcode'] ?>
+                                    </td>
+                                    <td><?= $order['phoneNumber'] ?></td>
+                                    <td><?= $order['address'] ?></td>
+                                    <td>$<?= $order['total_price'] ?></td>
 
-                                <td>Pending</td>
-                                <td><a href="delete-orders.html" class="btn btn-danger  text-center ">delete</a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>MOhamed</td>
-                                <td>moha@gmail.com</td>
-                                <td>town</td>
-                                <td>country</td>
-                                <td>
-                                    443223
-                                </td>
-                                <td>012343223</td>
-                                <td>Completely benchmark pandemic synergy vis-a-vis state of the art niches. Quickly mesh functionalized opportunities whereas turnkey solutions. </td>
-                                <td>$20</td>
 
-                                <td>Pending</td>
-                                <td><a href="delete-orders.html" class="btn btn-danger  text-center ">delete</a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>MOhamed</td>
-                                <td>moha@gmail.com</td>
-                                <td>town</td>
-                                <td>country</td>
-                                <td>
-                                    443223
-                                </td>
-                                <td>012343223</td>
-                                <td>Completely benchmark pandemic synergy vis-a-vis state of the art niches. Quickly mesh functionalized opportunities whereas turnkey solutions. </td>
-                                <td>$20</td>
+                                    <td>
+                                        <form action="/admins/orders?id=<?= $order['id'] ?>" method="post">
+                                            <input type="hidden" name="_method" value="DELETE">
+                                            <button class="btn btn-danger  text-center ">delete</button>
+                                        </form>
+                                    </td>
+                                </tr>
 
-                                <td>Pending</td>
-                                <td><a href="delete-orders.html" class="btn btn-danger  text-center ">delete</a></td>
-                            </tr>
+
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>

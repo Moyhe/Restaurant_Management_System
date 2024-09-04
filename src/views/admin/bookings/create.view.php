@@ -25,39 +25,26 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>MOhamed</td>
-                                <td>moha@gmail.com</td>
-                                <td>04/12/2023 3:13 PM</td>
-                                <td>3</td>
-                                <td>Rapidiously expedite team driven potentialities with interoperable "outside the box" thinking. Professionally formulate cross-platform interna</td>
-                                <td>Pending</td>
-                                <td>2023-04-09 15:13:17</td>
-                                <td><a href="delete-bookings.html" class="btn btn-danger  text-center ">delete</a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>MOhamed</td>
-                                <td>moha@gmail.com</td>
-                                <td>04/12/2023 3:13 PM</td>
-                                <td>3</td>
-                                <td>Rapidiously expedite team driven potentialities with interoperable "outside the box" thinking. Professionally formulate cross-platform interna</td>
-                                <td>Pending</td>
-                                <td>2023-04-09 15:13:17</td>
-                                <td><a href="delete-bookings.html" class="btn btn-danger  text-center ">delete</a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>MOhamed</td>
-                                <td>moha@gmail.com</td>
-                                <td>04/12/2023 3:13 PM</td>
-                                <td>3</td>
-                                <td>Rapidiously expedite team driven potentialities with interoperable "outside the box" thinking. Professionally formulate cross-platform interna</td>
-                                <td>Pending</td>
-                                <td>2023-04-09 15:13:17</td>
-                                <td><a href="delete-bookings.html" class="btn btn-danger  text-center ">delete</a></td>
-                            </tr>
+                            <?php foreach ($bookings as $booking) : ?>
+                                <tr>
+                                    <th scope="row"> <?= $booking['id'] ?> </th>
+                                    <td><?= $booking['name'] ?></td>
+                                    <td><?= $booking['email'] ?></td>
+                                    <td><?= $booking['date'] ?></td>
+                                    <td><?= $booking['people'] ?></td>
+                                    <td><?= $booking['special_request'] ?></td>
+                                    <td><?= $booking['status'] ?></td>
+                                    <td><?= $booking['created_at'] ?></td>
+                                    <td>
+                                        <form action="/admins/bookings?id=<?= $booking['id'] ?>" method="post">
+                                            <input type="hidden" name="_method" value="DELETE">
+                                            <button class="btn btn-danger  text-center ">delete</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+
+
                         </tbody>
                     </table>
                 </div>
