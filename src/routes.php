@@ -1,5 +1,6 @@
 <?php
 
+// users
 
 $router->get('/', 'index.php');
 $router->get('/contact', 'contact.php');
@@ -42,14 +43,23 @@ $router->get('/admins', 'admin/create.php');
 $router->get('/admins/all', 'admin/admins.php');
 $router->get('/admins/create', 'admin/register/admin_create.php');
 $router->post('/admins/create', 'admin/register/store.php');
+
 $router->get('/admins/session', 'admin/session/create.php');
 $router->post('/admins/session', 'admin/session/store.php');
 $router->delete('/admins/session', 'admin/session/destroy.php');
 
 $router->get('/admin/bookings', 'admin/bookings/create.php');
 $router->delete('/admins/bookings', 'admin/bookings/destroy.php');
+$router->get('/admins/bookings/edit', 'admin/bookings/edit.php');
+$router->patch('/admins/bookings', 'admin/bookings/update.php');
+
+
 $router->get('/admin/orders', 'admin/orders/create.php');
+$router->get('/admins/orders/edit', 'admin/orders/edit.php');
+$router->patch('/admins/orders', 'admin/orders/update.php');
 $router->delete('/admins/orders', 'admin/orders/destroy.php');
+
+
 $router->get('/admin/foods', 'admin/foods/create.php');
 $router->post('/admin/foods', 'admin/foods/store.php');
 $router->get('/admin/foods', 'admin/foods/destroy.php');

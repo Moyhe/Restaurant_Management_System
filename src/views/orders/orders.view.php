@@ -18,6 +18,7 @@
                         <th scope="col">phone number</th>
                         <th scope="col">address</th>
                         <th scope="col">total price</th>
+                        <th scope="col">status</th>
                         <th scope="col">date</th>
 
                     </tr>
@@ -36,6 +37,7 @@
                             <th><?= $order['phoneNumber'] ?></th>
                             <th><?= $order['address'] ?></th>
                             <th>$<?= $order['total_price'] ?></th>
+                            <th><?= $order['status'] ?></th>
                             <th><?= $order['created_at'] ?></th>
                         </tr>
                     <? endforeach; ?>

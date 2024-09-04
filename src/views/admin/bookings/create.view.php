@@ -3,7 +3,6 @@
 
 
 <div class="container-fluid">
-
     <div class="row">
         <div class="col">
             <div class="card">
@@ -22,6 +21,7 @@
                                 <th scope="col">status</th>
                                 <th scope="col">created_at</th>
                                 <th scope="col">delete</th>
+                                <th scope="col">update status</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -41,20 +41,17 @@
                                             <button class="btn btn-danger  text-center ">delete</button>
                                         </form>
                                     </td>
+                                    <td>
+                                        <a href="/admins/bookings/edit?id=<?= $booking['id'] ?>" class="btn btn-warning  text-center ">Edit</a>
+                                    </td>
                                 </tr>
                             <?php endforeach; ?>
-
-
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
     </div>
-
-
-
 </div>
-
 
 <?php require base_path('views/admin/partials/footer.php') ?>

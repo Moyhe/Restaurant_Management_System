@@ -21,7 +21,8 @@
                                 <th scope="col">phone_number</th>
                                 <th scope="col">address</th>
                                 <th scope="col">total_price</th>
-                                <!-- <th scope="col">status</th> -->
+                                <th scope="col">status</th>
+                                <th scope="col">update status</th>
                                 <th scope="col">delete</th>
                             </tr>
                         </thead>
@@ -39,8 +40,11 @@
                                     <td><?= $order['phoneNumber'] ?></td>
                                     <td><?= $order['address'] ?></td>
                                     <td>$<?= $order['total_price'] ?></td>
+                                    <td><?= $order['status'] ?></td>
 
-
+                                    <td>
+                                        <a href="/admins/orders/edit?id=<?= $order['id'] ?>" class="btn btn-warning  text-center ">Edit</a>
+                                    </td>
                                     <td>
                                         <form action="/admins/orders?id=<?= $order['id'] ?>" method="post">
                                             <input type="hidden" name="_method" value="DELETE">
