@@ -17,12 +17,12 @@ $router->post('/session', 'session/store.php')->only('guest');
 $router->delete('/session', 'session/destroy.php')->only('auth');
 
 $router->get('/cart', 'cart/index.php');
-$router->get('/items', 'cart/itemDetails.php');
+$router->get('/items', 'cart/itemDetails.php')->only('auth');
 $router->post('/addToCart', 'cart/store.php')->only('auth');
 $router->delete('/delete-item', 'cart/destroy.php')->only('auth');
 
 $router->get('/checkout', 'checkout/create.php')->only('auth');
-$router->get('/pay', 'payment/paypal.php')->only('auth');;
+$router->get('/pay', 'payment/paypal.php')->only('auth');
 $router->get('/clear-cart', 'payment/destroy.php')->only('auth');
 $router->post('/checkout', 'checkout/store.php')->only('auth');
 
@@ -45,7 +45,7 @@ $router->post('/admins/create', 'admin/register/store.php')->only('admin');
 
 $router->get('/admins/session', 'admin/session/create.php')->only('admin_guest');
 $router->post('/admins/session', 'admin/session/store.php')->only('admin_guest');
-$router->delete('/admins/session', 'admin/session/destroy.php')->only('admin_guest');
+$router->delete('/admins/session', 'admin/session/destroy.php');
 
 $router->get('/admin/bookings', 'admin/bookings/create.php')->only('admin');
 $router->delete('/admins/bookings', 'admin/bookings/destroy.php')->only('admin');
