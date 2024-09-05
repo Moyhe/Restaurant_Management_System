@@ -12,17 +12,22 @@ will just clone the project and have fun. joking... it will be comming soon
 
     git clone git@github.com:Moyhe/Restaurant_Management_System.git
 
-2- navigate in your terminal to the cloned project and run this command to serve your app
+2- database tables to use in your local machines
+
+| ![Image 1](public/img/img1.png) | ![Image 2](public/img/img2.png) | ![Image 3](public/img/img3.png) | ![Image 4](public/img/img4.png) |
+| ![Image 5](public/img/img5.png) | ![Image 6](public/img/img6.png) | ![Image 7](public/img/img7.png) | ![Image 8](public/img/img8.png) |
+
+3- navigate in your terminal to the cloned project and run this command to serve your app
 
     docker-compose up -d --build
 
-3-Three additional containers are included that handle Composer, NPM, and Artisan commands without having to have these platforms installed on your local computer. Use the following command examples from your project root, modifying them to fit your particular use case by the way you can put any project you want whether a laravel or php in src folder and use the same steps.
+4-Three additional containers are included that handle Composer, NPM, and Artisan commands without having to have these platforms installed on your local computer. Use the following command examples from your project root, modifying them to fit your particular use case by the way you can put any project you want whether a laravel or php in src folder and use the same steps.
 
     docker-compose run --rm composer update
     docker-compose run --rm npm run dev
     docker-compose run --rm artisan migrate
 
-4-if you face any problems with your file system permissoins, follow these steps to handle the issue
+5-if you face any problems with your file system permissoins, follow these steps to handle the issue
 
 first stop the containers using this command
 
@@ -34,7 +39,7 @@ and finally Re-build the containers by running
 
     docker-compose build --no-cache
 
-5. go to the paypal website and get the clinet_id and put it in paypal page to activate payment in you local.
+6- go to the paypal website and get the clinet_id and put it in paypal page to activate payment in you local.
 
 ## Features
 
