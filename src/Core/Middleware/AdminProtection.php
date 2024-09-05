@@ -20,17 +20,5 @@ class AdminProtection
             redirect('/');
             return;
         }
-
-        $userRole = $db->query('SELECT role FROM admins WHERE id = :id', [
-            'id' => $user_id
-        ])->find();
-
-        if ($userRole['role'] !== 'admin') {
-
-            redirect('/');
-            return;
-        }
-
-        redirect('/admins/all');
     }
 }

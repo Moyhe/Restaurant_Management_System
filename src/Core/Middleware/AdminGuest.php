@@ -10,7 +10,7 @@ class AdminGuest
     public function handle()
     {
         if (Session::has('admin')) {
-            redirect('/admins/all');
+            redirect('/admins');
             return;
         }
     }
