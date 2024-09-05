@@ -14,13 +14,20 @@ will just clone the project and have fun. joking... it will be comming soon
 
 2- database tables to use in your local machines
 
-| ![Image 1](./src/public/img/img1.png) | ![Image 2](./src/public/img/img2.png) | ![Image 3](./src/public/img/img3.png) | ![Image 4](./src/public/img/img4.png) |
-
-| --- | --- | --- | --- |
-
-| ![Image 5](./src/public/img/img5.png) | ![Image 6](./src/public/img/img6.png) | ![Image 7](./src/public/img/img7.png) | ![Image 8](./src/public/img/img8.png) |
-
-| --- | --- | --- | --- |
+<table>
+  <tr>
+    <td><img src="./src/public/img/img1.png" width="200" /></td>
+    <td><img src="./src/public/img/img2.png" width="200" /></td>
+    <td><img src="./src/public/img/img3.png" width="200" /></td>
+    <td><img src="./src/public/img/img4.png" width="200" /></td>
+  </tr>
+  <tr>
+    <td><img src="./src/public/img/img5.png" width="200" /></td>
+    <td><img src="./src/public/img/img6.png" width="200" /></td>
+    <td><img src="./src/public/img/img7.png" width="200" /></td>
+    <td><img src="./src/public/img/img8.png" width="200" /></td>
+  </tr>
+</table>
 
 3- navigate in your terminal to the cloned project and run this command to serve your app
 
