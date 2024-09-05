@@ -23,8 +23,9 @@ class AdminAuthenticator extends Authenticator
                     'email' => $email
                 ]);
 
-                $_SESSION['admin'] = [
-                    'name' => $user['name']
+                $_SESSION['admin_name'] = [
+                    'name' => $user['name'],
+                    'id' => $user['id']
                 ];
 
                 return true;

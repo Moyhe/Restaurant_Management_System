@@ -40,10 +40,11 @@ if ($user) {
     exit();
 } else {
 
-    $user =  $db->query('INSERT INTO admins(name, email, password) VALUES(:name, :email, :password)', [
+    $user =  $db->query('INSERT INTO admins(name, email, password, role) VALUES(:name, :email, :password, :role)', [
         'name' => $name,
         'email' => $email,
-        'password' => password_hash($password, PASSWORD_BCRYPT)
+        'password' => password_hash($password, PASSWORD_BCRYPT),
+        'role' => 'admin'
     ]);
 
     (new AdminAuthenticator)->login(['email' => $email]);

@@ -39,7 +39,7 @@ use Core\Session;
                             <a class="nav-link  dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
 
-                                <?= Session::get('admin')['name'] ?>
+                                <?= Session::get('admin_name')['name'] ?>
 
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">

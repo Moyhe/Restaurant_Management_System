@@ -21,16 +21,16 @@ class Router
         return $this;
     }
 
-    public function get($uri, $controller): void
+    public function get($uri, $controller): static
     {
-        $this->add('GET', $uri, $controller);
+        return $this->add('GET', $uri, $controller);
     }
 
 
 
-    public function post($uri, $controller): void
+    public function post($uri, $controller): static
     {
-        $this->add('POST', $uri, $controller);
+        return $this->add('POST', $uri, $controller);
     }
 
     public function delete($uri, $controller): static

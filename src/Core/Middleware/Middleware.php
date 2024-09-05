@@ -9,7 +9,10 @@ class Middleware
 {
     public const MAP = [
         'guest' => Guest::class,
-        'auth' => Authenticated::class
+        'auth' => Authenticated::class,
+        'admin' => Admin::class,
+        'role' => AdminProtection::class,
+        'admin_guest' => AdminGuest::class
     ];
 
     /**
