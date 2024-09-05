@@ -13,7 +13,6 @@ will just clone the project and have fun. joking... it will be comming soon
     git clone git@github.com:Moyhe/Restaurant_Management_System.git
 
 2- database tables to use in your local machines
-./src/public/img/img1.png
 
 <table>
   <tr>
