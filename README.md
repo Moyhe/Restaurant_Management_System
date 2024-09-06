@@ -59,5 +59,6 @@ and finally Re-build the containers by running
 2. add items to cart
 3. book a table for your family
 4. review system
-5. payment integratoin with paypal
-6. admin panel for managing bookings, orders, meals and other admins
+5. middleware protection
+6. payment integratoin with paypal
+7. admin panel for managing bookings, orders, meals and other admins
