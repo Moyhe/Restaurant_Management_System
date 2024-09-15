@@ -2,6 +2,8 @@
 
 this project built with mvc architecture in pure php 8, OOP, MySQL, nginx all that was built on docker
 
+![My logo](./src/public/img/resturant.png)
+
 ## Demo
 
 will just clone the project and have fun. joking... it will be comming soon
